@@ -29,7 +29,7 @@ function fetchAndDisplaySequence() {
 function showCaptcha() {
     const container = document.getElementById("captcha-container");
     AwsWafCaptcha.renderCaptcha(container, {
-        // apiKey: "",
+        apiKey: "",
         onSuccess: () => {
             captchaResolved = true;
             document.getElementById("captcha-container").innerHTML = '';
