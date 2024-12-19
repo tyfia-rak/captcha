@@ -10,7 +10,6 @@ function fetchAndDisplaySequence() {
         if (i <= N) {
             fetch('https://api.prod.jcloudify.com/whoami')
                 .then(response => {
-                    console.log(`Request ${i}: Status ${response.status}`);
                     if (N >= 100 && response.status === 403 && !captchaResolved) {
                         showCaptcha();
                     } else {
